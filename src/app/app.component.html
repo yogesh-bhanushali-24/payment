@@ -1,0 +1,47 @@
+<div class="card-container">
+  <h1>ANGULAR+CRUD</h1>
+<div class="cards-container"></div>
+<div class="cards-grid"></div>
+<div class="cards-form">
+  <form #form="ngForm" (ngSubmit)="onsubmit()" >
+    <div class="form-group">
+      <label for="">CardOwnerName</label>
+      <input type="text" name="CardOwnerName" [(ngModel)]="card['CardOwnerName']">
+    </div>
+    <div class="form-group">
+      <label for="">CardNumber</label>
+      <input type="text" name="CardNumber" [(ngModel)]="card['CardNumber']">
+    </div>
+    <div class="form-group">
+      <label for="">ExpirationDate</label>
+      <input type="text" name="ExpirationDate" [(ngModel)]="card['ExpirationDate']">
+    </div>
+    <div class="form-group">
+      <label for="">SecurityCode</label>
+      <input type="text" name="SecurityCode" [(ngModel)]="card['SecurityCode']">
+    </div>
+<button class="btn btn-danger">save</button>
+</form>
+<div class="card-row">
+  <div class="card-row-details">
+   
+<table>
+  <tr  *ngFor="let data of datas">
+   
+    <td>{{data["CardOwnerName"]}}</td>
+    <td>{{data["CardNumber"]}}</td>
+
+    <div>
+      <button class="btn btn-danger">update</button>
+      <button class="btn btn-danger">delete</button>
+
+    </div>
+
+  </tr>
+
+</table>
+</div>
+</div>
+ 
+</div>
+</div>
